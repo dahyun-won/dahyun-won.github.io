@@ -1,11 +1,11 @@
 :root {
   --bg: #ffffff;
-  --bg-alt: #f2f6fd;
-  --ink: #0f1b2d;
-  --ink-soft: #46586f;
-  --ink-faint: #7b8ba1;
-  --accent: #1e56c8;
-  --line: #dbe4f1;
+  --bg-alt: #f5f5f5;
+  --ink: #111111;
+  --ink-soft: #4d4d4d;
+  --ink-faint: #8a8a8a;
+  --accent: #111111;
+  --line: #e4e4e4;
   --card-bg: #ffffff;
   --serif: 'Newsreader', Georgia, serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -13,26 +13,26 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #0b1220;
-  --bg-alt: #101a2e;
-  --ink: #e8eefc;
-  --ink-soft: #aebbd6;
-  --ink-faint: #74829e;
-  --accent: #7aa7ff;
-  --line: #1f2c47;
-  --card-bg: #111b30;
+  --bg: #0a0a0a;
+  --bg-alt: #141414;
+  --ink: #f2f2f2;
+  --ink-soft: #b3b3b3;
+  --ink-faint: #808080;
+  --accent: #f2f2f2;
+  --line: #262626;
+  --card-bg: #111111;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0b1220;
-    --bg-alt: #101a2e;
-    --ink: #e8eefc;
-    --ink-soft: #aebbd6;
-    --ink-faint: #74829e;
-    --accent: #7aa7ff;
-    --line: #1f2c47;
-    --card-bg: #111b30;
+    --bg: #0a0a0a;
+    --bg-alt: #141414;
+    --ink: #f2f2f2;
+    --ink-soft: #b3b3b3;
+    --ink-faint: #808080;
+    --accent: #f2f2f2;
+    --line: #262626;
+    --card-bg: #111111;
   }
 }
 
@@ -191,19 +191,10 @@ a { color: inherit; }
 .pill-primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--bg);
 }
 
-.pill-primary:hover { color: #fff; opacity: 0.88; }
-
-.statement h2 {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0 0 18px;
-}
-
-.statement strong { color: var(--accent); font-weight: 600; }
+.pill-primary:hover { color: var(--bg); opacity: 0.85; }
 
 .statement ul {
   margin: 0;
@@ -217,8 +208,6 @@ a { color: inherit; }
 .statement ul a:hover { color: var(--accent); border-color: var(--accent); }
 
 .statement {
-  border-left: 2px solid var(--accent);
-  padding-left: 24px;
   margin-bottom: 32px;
 }
 
@@ -288,11 +277,35 @@ a { color: inherit; }
 
 /* Research projects */
 .project {
-  padding: 32px 0;
-  border-top: 1px solid var(--line);
+  margin-bottom: 48px;
 }
 
-.project:first-of-type { border-top: none; padding-top: 0; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.tab {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card-bg);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: border-color 0.15s ease;
+}
+
+.tab:hover { border-color: var(--accent); }
+
+.tab[aria-selected="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
 
 .project-head {
   margin-bottom: 14px;
