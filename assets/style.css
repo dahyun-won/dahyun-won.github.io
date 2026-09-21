@@ -1,11 +1,11 @@
 :root {
-  --bg: #faf8f4;
-  --bg-alt: #f2efe8;
-  --ink: #1c1a17;
-  --ink-soft: #55524b;
-  --ink-faint: #8b877d;
-  --accent: #7a3b2e;
-  --line: #e2ddd2;
+  --bg: #ffffff;
+  --bg-alt: #f2f6fd;
+  --ink: #0f1b2d;
+  --ink-soft: #46586f;
+  --ink-faint: #7b8ba1;
+  --accent: #1e56c8;
+  --line: #dbe4f1;
   --card-bg: #ffffff;
   --serif: 'Newsreader', Georgia, serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -13,26 +13,26 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #15130f;
-  --bg-alt: #1b1915;
-  --ink: #ede9e0;
-  --ink-soft: #b8b2a4;
-  --ink-faint: #7d7869;
-  --accent: #e0a377;
-  --line: #302c24;
-  --card-bg: #1e1c17;
+  --bg: #0b1220;
+  --bg-alt: #101a2e;
+  --ink: #e8eefc;
+  --ink-soft: #aebbd6;
+  --ink-faint: #74829e;
+  --accent: #7aa7ff;
+  --line: #1f2c47;
+  --card-bg: #111b30;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #15130f;
-    --bg-alt: #1b1915;
-    --ink: #ede9e0;
-    --ink-soft: #b8b2a4;
-    --ink-faint: #7d7869;
-    --accent: #e0a377;
-    --line: #302c24;
-    --card-bg: #1e1c17;
+    --bg: #0b1220;
+    --bg-alt: #101a2e;
+    --ink: #e8eefc;
+    --ink-soft: #aebbd6;
+    --ink-faint: #74829e;
+    --accent: #7aa7ff;
+    --line: #1f2c47;
+    --card-bg: #111b30;
   }
 }
 
@@ -187,6 +187,34 @@ a { color: inherit; }
 }
 
 .pill:hover { border-color: var(--accent); color: var(--accent); }
+
+.pill-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.pill-primary:hover { color: #fff; opacity: 0.88; }
+
+.statement h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.statement strong { color: var(--accent); font-weight: 600; }
+
+.statement ul {
+  margin: 0;
+  padding-left: 22px;
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.statement ul a { text-decoration: none; border-bottom: 1px solid var(--line); }
+.statement ul a:hover { color: var(--accent); border-color: var(--accent); }
 
 .statement {
   border-left: 2px solid var(--accent);
@@ -473,5 +501,5 @@ a { color: inherit; }
   .hero { padding: 56px 20px 40px; }
   .page-head { padding: 48px 20px 36px; }
   .section { padding: 52px 0; }
-  .header-inner { height: auto; padding: 14px 0; flex-wrap: wrap; row-gap: 10px; }
+  .header-inner { height: auto; padding: 14px 20px; flex-wrap: wrap; row-gap: 10px; }
 }
