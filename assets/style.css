@@ -558,6 +558,15 @@ a { color: inherit; }
   font-size: 0.98rem;
 }
 
+.tl-org a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+
+.tl-org a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
 .tl-note {
   margin-top: 12px;
   padding-left: 16px;
