@@ -635,6 +635,16 @@ a { color: inherit; }
 .entry-text strong { color: var(--ink); font-weight: 700; }
 .entry-text em { color: var(--ink); }
 
+.entry-text a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 2px;
+  word-break: break-all;
+}
+
+.entry-text a:hover { text-decoration-color: var(--accent); }
+
 .cite-title {
   color: var(--ink);
   font-weight: 600;
