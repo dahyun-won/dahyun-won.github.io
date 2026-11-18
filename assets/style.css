@@ -230,24 +230,6 @@ a { color: inherit; }
 .statement p:last-child { margin-bottom: 0; }
 .statement em { color: var(--accent); font-style: italic; }
 
-.interest-tags {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.interest-tags li {
-  font-size: 0.8rem;
-  color: var(--ink-soft);
-  background: var(--bg-alt);
-  border: 1px solid var(--line);
-  padding: 5px 12px;
-  border-radius: 6px;
-}
-
 /* Sections */
 .section {
   padding: 72px 0;
